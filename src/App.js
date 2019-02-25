@@ -1,9 +1,13 @@
-import React from 'react'
+import React from 'react';
 
 class App extends React.Component {
   render() {
-    return <div>Idea Byte</div>
+    return (
+      <div>
+        <h1>Mario's Part</h1>
+      </div>
+    );
   }
 }
 
-export default App
+export default App;
