@@ -24,7 +24,7 @@ const ContainerCards = styled.div`
   display: flex;
 
   flex-direction: row;
-  padding-left: 10%;
+  padding-left: 13%;
   padding-right: 10%;
   -webkit-flex-wrap: wrap;
 `
