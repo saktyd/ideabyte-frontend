@@ -16,7 +16,7 @@ const StyledHeader = styled.div`
   display: flex;
   text-align: center;
   flex-direction: column;
-  height: 300px;
+  height: 320px;
   margin: 0 auto;
 `
 
@@ -63,13 +63,16 @@ const SpanDiv = styled.div`
   align-items: center;
 
   background-color: #333333;
-  height: 30px;
+  height: 35px;
   margin-bottom: 25px;
 `
 
 const SearchLogo = styled.img`
   width: 15px;
   height: 15px;
+`
+const ButtonCTAHome = styled.div`
+  margin-bottom: 30px;
 `
 
 class HeaderHome extends Component {
@@ -89,14 +92,14 @@ class HeaderHome extends Component {
             </p>
           </PararagraphHeader>
 
-          <div>
+          <ButtonCTAHome>
             <ButtonGetStarted>
               <b>Get Started</b>{' '}
             </ButtonGetStarted>
             <ButtonExploreIdeas>
               <b>Explore Ideas</b>{' '}
             </ButtonExploreIdeas>
-          </div>
+          </ButtonCTAHome>
         </StyledHeader>
         <SpanDiv>
           <SearchLogo src="../assets/images/search-icon.svg" />

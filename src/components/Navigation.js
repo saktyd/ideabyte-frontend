@@ -5,12 +5,13 @@ import styled from 'styled-components'
 const NavStyle = styled.nav`
   display: flex;
   justify-content: center;
+  align-items: center;
   font-family: 'Fira Sans', sans-serif;
   font-size: 14px;
 
   a {
     text-decoration: none;
-    margin: 10px 10px;
+    margin: 20px 40px;
     color: white;
   }
   border: none;
@@ -21,7 +22,7 @@ const NavStyle = styled.nav`
 `
 
 const LogoIdeaByte = styled.img`
-  height: 25px;
+  height: 50px;
 `
 
 const Navigation = () => {
@@ -33,7 +34,7 @@ const Navigation = () => {
       <Link to="/About">
         <b>About</b>
       </Link>
-      <LogoIdeaByte src="../assets/exports/logo-ideabyte.png" alt="" />
+      <LogoIdeaByte src="../assets/exports/ideabyte-logo-white.png" alt="" />
       <Link to="/Register">
         <b>Register</b>
       </Link>
