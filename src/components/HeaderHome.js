@@ -1,19 +1,8 @@
 import React, { Component } from 'react'
-import { Link } from 'react-router-dom'
+
 import styled from 'styled-components'
+import Navigation from './Navigation'
 
-const NavStyle = styled.nav`
-  display: flex;
-  justify-content: center;
-  font-family: 'Fira Sans', sans-serif;
-  font-size: 14px;
-
-  a {
-    text-decoration: none;
-    margin: 10px 10px;
-    color: white;
-  }
-`
 const StyledHeader = styled.div`
   background-image: linear-gradient(
       0deg,
@@ -27,7 +16,6 @@ const StyledHeader = styled.div`
   display: flex;
   text-align: center;
   flex-direction: column;
-  width: 1024px;
   height: 300px;
   margin: 0 auto;
 `
@@ -60,48 +48,36 @@ const ButtonExploreIdeas = styled.button`
   height: 25px;
   margin: 0 20px;
 `
-const SearchStyle = styled.button`
+const SearchStyle = styled.form`
   background-color: #333333;
+  font-family: 'Fira Sans', sans-serif;
   color: white;
   width: 110px;
-  margin: 0 auto;
+  margin: 0 2px;
   border: none;
   font-size: 14px;
 `
 const SpanDiv = styled.div`
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
   background-color: #333333;
-  width: 1024px;
   height: 30px;
+  margin-bottom: 25px;
 `
 
 const SearchLogo = styled.img`
-  width: 10px;
-  height: 10px;
-`
-const LogoIdeaByte = styled.img`
-  height: 25px;
+  width: 15px;
+  height: 15px;
 `
 
-class Container extends Component {
+class HeaderHome extends Component {
   render() {
     return (
       <div>
         <StyledHeader>
-          <NavStyle>
-            <Link to="/">
-              <b>Home</b>{' '}
-            </Link>
-            <Link to="/About">
-              <b>About</b>{' '}
-            </Link>
-            <LogoIdeaByte src="../assets/exports/logo-ideabyte.png" alt="" />
-            <Link to="/Register">
-              <b>Register</b>{' '}
-            </Link>
-            <Link to="/Login">
-              <b>Login</b>{' '}
-            </Link>
-          </NavStyle>
+          <Navigation />
           <PararagraphHeader>
             <p>
               {' '}
@@ -131,4 +107,4 @@ class Container extends Component {
   }
 }
 
-export default Container
+export default HeaderHome
