@@ -1,6 +1,7 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
 import styled from 'styled-components'
+import { connect } from 'react-redux'
 
 const NavStyle = styled.nav`
   display: flex;
@@ -30,8 +31,8 @@ const NavHover = styled.b`
   }
 `
 
-const Navigation = () => {
-  const isAuthenticated = false
+const Navigation = props => {
+  const isAuthenticated = props.isAuthenticated
 
   return (
     <NavStyle>
@@ -68,4 +69,10 @@ const Navigation = () => {
   )
 }
 
-export default Navigation
+const mapStateToProps = state => {
+  return {
+    isAuthenticated: state.isAuthenticated
+  }
+}
+
+export default connect(mapStateToProps)(Navigation)

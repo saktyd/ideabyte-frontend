@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-
+import { Link } from 'react-router-dom'
 import styled from 'styled-components'
 import Navigation from './Navigation'
 
@@ -39,6 +39,10 @@ const ButtonGetStarted = styled.button`
   width: 150px;
   height: 35px;
   margin: 0 20px;
+  a {
+    text-decoration: none;
+    color: #333333;
+  }
 `
 
 const ButtonExploreIdeas = styled.button`
@@ -51,6 +55,13 @@ const ButtonExploreIdeas = styled.button`
   width: 150px;
   height: 35px;
   margin: 0 20px;
+  a {
+    text-decoration: none;
+    color: #333333;
+  }
+  :hover {
+    color: black;
+  }
 `
 const SearchStyle = styled.form`
   background-color: #333333;
@@ -92,7 +103,7 @@ class HeaderHome extends Component {
           <PararagraphHeader>
             <p>
               {' '}
-              <b>Shares and improve your ideas</b>{' '}
+              <b>Shares and improve your ideas</b>
             </p>
             <p>
               {' '}
@@ -102,10 +113,14 @@ class HeaderHome extends Component {
 
           <ButtonCTAHome>
             <ButtonGetStarted>
-              <b>Get Started</b>{' '}
+              <Link to="/register">
+                <b>Get Started</b>
+              </Link>
             </ButtonGetStarted>
             <ButtonExploreIdeas>
-              <b>Explore Ideas</b>{' '}
+              <Link to="/explore">
+                <b>Explore Ideas</b>
+              </Link>
             </ButtonExploreIdeas>
           </ButtonCTAHome>
         </StyledHeader>

@@ -28,9 +28,7 @@ const About = () => {
   return (
     <ContainerPage>
       <HeaderAbout />
-      <h1 size={2} scheme="light">
-        About Idea Byte
-      </h1>
+      <h1>About Idea Byte</h1>
 
       <Section>
         <p>

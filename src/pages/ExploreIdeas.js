@@ -1,8 +1,8 @@
 import React from 'react'
-import HeaderHome from '../components/HeaderHome'
+import Header from '../components/Header'
 import Footer from '../components/Footer'
-import styled from 'styled-components'
 import { connect } from 'react-redux'
+import styled from 'styled-components'
 
 const CardStyle = styled.div`
   display: flex;
@@ -73,12 +73,12 @@ const LocationIcon = styled.img`
   margin-left: 1px;
 `
 
-const Home = props => {
+const ExploreIdeas = props => {
   const ideas = props.ideas
-
   return (
     <div>
-      <HeaderHome />
+      <Header />
+      <h1>Explore Ideas</h1>
       <ContainerCards>
         {ideas.map((item, index) => {
           return (
@@ -110,14 +110,16 @@ const Home = props => {
           )
         })}
       </ContainerCards>
+
       <Footer />
     </div>
   )
 }
 
-const mapStateToStore = state => {
+const mapStateToProps = state => {
   return {
     ideas: state.ideas
   }
 }
-export default connect(mapStateToStore)(Home)
+
+export default connect(mapStateToProps)(ExploreIdeas)
