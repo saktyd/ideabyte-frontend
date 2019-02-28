@@ -29,6 +29,49 @@ const ContainerCards = styled.div`
   -webkit-flex-wrap: wrap;
 `
 
+const ContentCardTop = styled.div`
+  padding: 20px;
+  text-align: left;
+`
+const ContentCardBottom = styled.div`
+  padding: 0px 20px 20px 20px;
+  text-align: left;
+  font-family: Arial, Helvetica, sans-serif;
+`
+const CardDescription = styled.h4`
+  font-family: 'Fira Sans', sans-serif;
+`
+
+const TitleCard = styled.h3`
+  margin: 0px auto;
+`
+const ContainerName = styled.div`
+  display: flex;
+  text-align: left;
+`
+const ContainerDate = styled.div`
+  display: flex;
+  text-align: left;
+`
+const ContainerLocation = styled.div`
+  display: flex;
+  text-align: left;
+`
+
+const UserIcon = styled.img`
+  height: 25px;
+  margin-right: 30px;
+`
+const DateIcon = styled.img`
+  height: 25px;
+  margin-right: 30px;
+`
+const LocationIcon = styled.img`
+  height: 25px;
+  margin-right: 32px;
+  margin-left: 1px;
+`
+
 const Home = () => {
   const cards = [
     {
@@ -95,16 +138,30 @@ const Home = () => {
           return (
             <CardStyle key={index}>
               <CardImage src={item.image} alt={item.title} />
-              <h3>
-                {item.title} {index + 1}
-              </h3>
-              <p>{item.description}</p>
+              <ContentCardTop>
+                <TitleCard>
+                  {item.title} {index + 1}
+                </TitleCard>
+                <CardDescription>{item.description}</CardDescription>
+              </ContentCardTop>
 
-              <div>
-                <p>{item.author}</p>
-                <p>{item.date}</p>
-                <p>{item.location}</p>
-              </div>
+              <ContentCardBottom>
+                <ContainerName>
+                  <UserIcon src="../assets/images/user-icon.svg" alt="" />
+                  {item.author}
+                </ContainerName>
+                <ContainerDate>
+                  <DateIcon src="../assets/images/date-icon.svg" alt="" />
+                  {item.date}
+                </ContainerDate>
+                <ContainerLocation>
+                  <LocationIcon
+                    src="../assets/images/location-icon.svg"
+                    alt=""
+                  />
+                  {item.location}
+                </ContainerLocation>
+              </ContentCardBottom>
             </CardStyle>
           )
         })}

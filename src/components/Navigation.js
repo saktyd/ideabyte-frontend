@@ -14,32 +14,39 @@ const NavStyle = styled.nav`
     margin: 20px 40px;
     color: white;
   }
+
   border: none;
   box-sizing: none;
   opacity: 0.9;
-
   margin: 0 auto;
 `
 
 const LogoIdeaByte = styled.img`
   height: 50px;
 `
+const NavHover = styled.b`
+  :hover {
+    color: hsla(0, 0%, 80%, 1);
+  }
+`
 
 const Navigation = () => {
   return (
     <NavStyle>
       <Link to="/">
-        <b>Home</b>
+        <NavHover>Home</NavHover>
       </Link>
       <Link to="/About">
-        <b>About</b>
+        <NavHover>About</NavHover>
       </Link>
-      <LogoIdeaByte src="../assets/exports/ideabyte-logo-white.png" alt="" />
+      <Link to="/">
+        <LogoIdeaByte src="../assets/exports/ideabyte-logo-white.png" alt="" />
+      </Link>
       <Link to="/Register">
-        <b>Register</b>
+        <NavHover>Register</NavHover>
       </Link>
       <Link to="/Login">
-        <b>Login</b>
+        <NavHover>Login</NavHover>
       </Link>
     </NavStyle>
   )

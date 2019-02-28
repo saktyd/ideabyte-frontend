@@ -10,12 +10,14 @@ const StyledHeader = styled.div`
     ),
     url('/assets/images/cover-background.jpg');
   border: 1px solid #000000;
+  background-size: cover;
   box-sizing: border-box;
+  border-bottom: 4px solid hsla(45, 86%, 62%, 1);
   opacity: 0.9;
   display: flex;
   text-align: center;
   flex-direction: column;
-  height: 250px;
+  height: 230px;
   margin: 0 auto;
 `
 
@@ -23,7 +25,7 @@ const PararagraphHeader = styled.div`
   font-family: 'Fira Sans', sans-serif;
   font-size: 30px;
   color: white;
-  margin: 40px auto;
+  margin: 0px auto;
 `
 
 const HeaderAbout = () => {

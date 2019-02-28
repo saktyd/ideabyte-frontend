@@ -11,41 +11,45 @@ const StyledHeader = styled.div`
     ),
     url('../assets/images/cover-background.jpg');
   border: 1px solid #000000;
+  background-size: cover;
+  border-bottom: 4px solid hsla(45, 86%, 62%, 1);
   box-sizing: border-box;
   opacity: 0.9;
   display: flex;
   text-align: center;
   flex-direction: column;
-  height: 320px;
+  height: 335px;
   margin: 0 auto;
 `
 
 const PararagraphHeader = styled.div`
   font-family: 'Fira Sans', sans-serif;
-  font-size: 24px;
+  font-size: 30px;
   color: white;
-  margin: 40px auto;
+  margin: 0px auto;
 `
 
 const ButtonGetStarted = styled.button`
   background-color: #6fcf97;
   color: solid black;
+  font-size: 14px;
   box-sizing: border-box;
   border-radius: 4px;
   border-color: black;
-  width: 100px;
-  height: 25px;
+  width: 150px;
+  height: 35px;
   margin: 0 20px;
 `
 
 const ButtonExploreIdeas = styled.button`
   background-color: #f2c94c;
   color: solid black;
+  font-size: 14px;
   box-sizing: border-box;
   border-radius: 4px;
   border-color: black;
-  width: 100px;
-  height: 25px;
+  width: 150px;
+  height: 35px;
   margin: 0 20px;
 `
 const SearchStyle = styled.form`
@@ -53,9 +57,8 @@ const SearchStyle = styled.form`
   font-family: 'Fira Sans', sans-serif;
   color: white;
   width: 110px;
-  margin: 0 2px;
+  margin: 0 15px;
   border: none;
-  font-size: 14px;
 `
 const SpanDiv = styled.div`
   display: flex;
@@ -66,13 +69,18 @@ const SpanDiv = styled.div`
   height: 35px;
   margin-bottom: 25px;
 `
+const SearchBar = styled.input`
+  background-color: #333333;
+  border: none;
+  font-size: 15px;
+`
 
 const SearchLogo = styled.img`
   width: 15px;
   height: 15px;
 `
 const ButtonCTAHome = styled.div`
-  margin-bottom: 30px;
+  margin: 20px 20px 50px 20px;
 `
 
 class HeaderHome extends Component {
@@ -103,7 +111,9 @@ class HeaderHome extends Component {
         </StyledHeader>
         <SpanDiv>
           <SearchLogo src="../assets/images/search-icon.svg" />
-          <SearchStyle>Search Ideas...</SearchStyle>
+          <SearchStyle action="">
+            <SearchBar type="text" placeholder="Search Ideas..." />
+          </SearchStyle>
         </SpanDiv>
       </div>
     )
