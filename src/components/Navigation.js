@@ -36,16 +36,16 @@ const Navigation = () => {
       <Link to="/">
         <NavHover>Home</NavHover>
       </Link>
-      <Link to="/About">
+      <Link to="/about">
         <NavHover>About</NavHover>
       </Link>
       <Link to="/">
         <LogoIdeaByte src="../assets/exports/ideabyte-logo-white.png" alt="" />
       </Link>
-      <Link to="/Register">
+      <Link to="/register">
         <NavHover>Register</NavHover>
       </Link>
-      <Link to="/Login">
+      <Link to="/login">
         <NavHover>Login</NavHover>
       </Link>
     </NavStyle>

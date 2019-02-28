@@ -7,7 +7,6 @@ import Footer from '../components/Footer'
 // Use Vipot Height
 const ContainerPage = styled.div`
   display: flex;
-
   flex-direction: column;
   font-family: 'Fira Sans', sans-serif;
 `
