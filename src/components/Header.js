@@ -17,11 +17,11 @@ const StyledHeader = styled.div`
   display: flex;
   text-align: center;
   flex-direction: column;
-  height: 100px;
+  height: 68px;
   margin: 0 auto;
 `
 
-const HeaderLogin = () => {
+const Header = () => {
   return (
     <div>
       <StyledHeader>
@@ -31,4 +31,4 @@ const HeaderLogin = () => {
   )
 }
 
-export default HeaderLogin
+export default Header

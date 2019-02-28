@@ -1,5 +1,5 @@
 import React from 'react'
-import HeaderRegister from '../components/HeaderRegister'
+import Header from '../components/Header'
 import Footer from '../components/Footer'
 import styled from 'styled-components'
 
@@ -17,7 +17,7 @@ const ContainerRegister = styled.div`
 const Register = () => {
   return (
     <ContainerRegister>
-      <HeaderRegister />
+      <Header />
       <RegisterContent>
         <h2>Register your account</h2>
         <div>

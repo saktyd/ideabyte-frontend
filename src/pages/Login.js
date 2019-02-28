@@ -1,6 +1,6 @@
 import React from 'react'
 import Footer from '../components/Footer'
-import HeaderLogin from '../components/HeaderLogin'
+import Header from '../components/Header'
 import styled from 'styled-components'
 
 const LoginContent = styled.form`
@@ -18,7 +18,7 @@ class Login extends React.Component {
   render() {
     return (
       <ContainerLogin>
-        <HeaderLogin />
+        <Header />
         <LoginContent>
           <h2>Login to your account</h2>
 

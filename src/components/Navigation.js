@@ -31,6 +31,8 @@ const NavHover = styled.b`
 `
 
 const Navigation = () => {
+  const isAuthenticated = false
+
   return (
     <NavStyle>
       <Link to="/">
@@ -42,12 +44,26 @@ const Navigation = () => {
       <Link to="/">
         <LogoIdeaByte src="../assets/exports/ideabyte-logo-white.png" alt="" />
       </Link>
-      <Link to="/register">
-        <NavHover>Register</NavHover>
-      </Link>
-      <Link to="/login">
-        <NavHover>Login</NavHover>
-      </Link>
+      {!isAuthenticated && (
+        <Link to="/register">
+          <NavHover>Register</NavHover>
+        </Link>
+      )}
+      {!isAuthenticated && (
+        <Link to="/login">
+          <NavHover>Login</NavHover>
+        </Link>
+      )}
+      {isAuthenticated && (
+        <Link to="/profile">
+          <NavHover>My Profile</NavHover>
+        </Link>
+      )}
+      {isAuthenticated && (
+        <Link to="/post">
+          <NavHover>Post Idea</NavHover>
+        </Link>
+      )}
     </NavStyle>
   )
 }
